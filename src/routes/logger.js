@@ -1,10 +1,10 @@
 const endpoint = "https://www.functionup.org"
 const batch = "radon"
 
-const log = function() {
-    console.log('I am inside the log function')
+const show = function() {
+    console.log('I am inside the show function')
 }
 
 module.exports.endpoint = endpoint
 module.exports.batch = batch
-module.exports.log = log
+module.exports.show = show
