@@ -1,15 +1,18 @@
-const cohortName = "  Backend Cohort";
+
 const trimString = function (){
-    //const trimmedString = cohortName.trim();
-    console.log('trimmed string is:' + cohortName);
+    const cohortName = "  Backend Cohort  ";
+    const trimmedString = cohortName.trim();
+    console.log('trimmed string is:' + trimmedString);
 }
 
 const changetoLowerCase = function(){
-const lowercaseString=cohortName.toLowerCase();
+    const name = "ADITI SAH";
+const lowercaseString=name.toLowerCase();
 console.log("hardcoded string in lowercase is:" + lowercaseString);
 }
 
 const changeToUpperCase = function(){
+    const name = "AdiTi sah";
     const uppercaseString = cohortName.toUpperCase();
     console.log("hardcoded string in uppercase is:" + uppercaseString);
 }

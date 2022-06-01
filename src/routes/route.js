@@ -1,15 +1,10 @@
 const express = require('express');
-const externalModule = require('./logger')
 const loggerModule = require('./../logger/logger.js')
 const helper = require('./../util/helper');
 const formatter = require('./../validator/formatter');
 const router = express.Router();
 
 router.get('/test-me', function (req, res) {
-    console.log('The constant in logger route has a value '+externalModule.endpoint)
-    console.log('The current batch is '+externalModule.batch)
-    externalModule.show();
-    loggerModule.welcome();
     helper.date();
     helper.month();
     helper.batchDetail();
