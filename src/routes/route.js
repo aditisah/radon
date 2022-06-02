@@ -1,9 +1,5 @@
 const express = require('express');
-const myHelper = require('../util/helper')
-const underscore = require('underscore')
 const lodash = require('../lodashFunctionalty/lodashFunc');
-const req = require('express/lib/request');
-const res = require('express/lib/response');
 const router = express.Router();
 
 const movieArr = [ {
