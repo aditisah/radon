@@ -9,22 +9,39 @@ router.get('/test-me', function (req, res) {
     externalModule.log()
     res.send('My first ever api!')
 });
+router.get('/sol1', function(req,res){
+let arr = [1,2,3,4,5,7,8];
+ let n=arr[arr.length-1];
+ //let n= arr.length+1;
+// console.log(n);
+ let sum = n*(n+1)/2;
+// console.log(sum);
+let sumOfArray = 0;
+for(let i=0;i<arr.length;i++){
+    sumOfArray = sumOfArray + arr[i];
+}
+let missingNumber = sum - sumOfArray;
+res.send(`Missing number is: ${missingNumber}`);
+})
 
-router.get('/test-me1', function (req, res) {
-    res.send('My second ever api!')
-});
 
-router.get('/test-me2', function (req, res) {
-    res.send('My third api!')
-});
-
-router.get('/test-me3', function (req, res) {
-    res.send('My 4th api!')
-});
-
-router.get('/test-me4', function (req, res) {
-    res.send('My last api!')
-});
+router.get('/sol2', function(req,res){
+    let arr = [35,36,38,39];
+    const n = arr.length+1;
+    const firstNumber = arr[0];
+    const lastNumber = arr[arr.length-1];
+    const sum = n*(firstNumber+lastNumber)/2;
+    //console.log(arr[arr.length-1]);
+    let sumOfTheArr = 0;
+    //const sum = (arr.length+1)(arr[0]+arr[arr.length-1])/2;
+    for(let i=0;i<arr.length;i++){
+         sumOfTheArr = sumOfTheArr + arr[i];
+        
+        
+    }
+    const missingNumber = sum - sumOfTheArr; 
+    res.send(`Missing number is: ${missingNumber}`);
+})
 
 module.exports = router;
 // adding this comment for no reason
