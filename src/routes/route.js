@@ -11,7 +11,7 @@ router.get('/test-me', function (req, res) {
 });
 router.get('/sol1', function(req,res){
 let arr = [1,2,3,4,5,7,8];
- let n=arr[arr.length-1];
+ let n=arr.length+1;
  //let n= arr.length+1;
 // console.log(n);
  let sum = n*(n+1)/2;
