@@ -1,13 +1,46 @@
 const express = require('express');
-const externalModule = require('./logger')
-
 const router = express.Router();
-
-router.get('/test-me', function (req, res) {
-    console.log('The constant in logger route has a value '+externalModule.endpoint)
-    console.log('The current batch is '+externalModule.batch)
-    externalModule.log()
-    res.send('My first ever api!')
+let players = 
+[
+    {
+        "name": "manish",
+        "dob": "1/1/1995",
+        "gender": "male",
+        "city": "jalandhar",
+        "sports": [
+        "swimming"
+        ]
+        },
+        {
+            "name": "lokesh",
+            "dob": "1/1/1990",
+            "gender": "male",
+            "city": "mumbai",
+            "sports": [
+            "soccer"
+            ]
+            },
+        {
+            "name": "gopal",
+            "dob": "1/1/1995",
+            "gender": "male",
+            "city": "delhi",
+            "sports": [
+            "soccer"
+        ]
+}
+]
+router.post('/players', function (req, res) {
+    let newPlayer = req.body;
+    const IsPlayerExisted = players.some(player=>player.name === newPlayer.name);
+    if(!IsPlayerExisted){
+        players.push(newPlayer);
+        res.send(players);
+    }
+    else{
+        res.send('Player already exists!');
+    }
+    //console.log()
 });
 
 router.get('/test-me1', function (req, res) {
