@@ -8,7 +8,7 @@ const bookSchema = mongoose.Schema({
     authorName: String,
     catagory: String,
     year: String
-}, { timestamp: true});
+}, { timestamps: true});
 
 
 module.exports = mongoose.model('Book',bookSchema);
