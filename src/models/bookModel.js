@@ -6,20 +6,11 @@ const bookSchema = new mongoose.Schema( {
         required: true,
         unique: true
     } ,
-    authorName: String, 
-    tags: [String],
-    prices: {
-        indianPrice: String,
-        europeanPrice: String,
-    },
-    year: {
-        type: Number,
-        default: 2021
-    },
-    totalPages: Number,
-    stockAvailable: Boolean
+    author_id: Number,
+    price: Number,
+    ratings: Number
 }, { timestamps: true });
 
 
-module.exports = mongoose.model('anotherBook', bookSchema) //users
+module.exports = mongoose.model('bookDetail', bookSchema) //users
 
