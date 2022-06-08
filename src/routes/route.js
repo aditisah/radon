@@ -1,13 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const BookController= require("../controllers/bookController")
-const AuthorController = require("../controllers/authorController");
+//const AuthorController = require("../controllers/authorController");
 
-router.post("/createAuthor", AuthorController.createAuthor);
-router.post("/createBook", BookController.createBook);
-router.get("/getBookByAuthor", BookController.getBookByAuthor)
-router.get("/findAuthorByBook", BookController.findAuthorByBook)
-router.get("/getAuthorWithBooks", BookController.getAuthorWithBooks)
 router.get("/getBooksByAuthorId/:author_id", BookController.getBooksByAuthorId)
 router.get("/getListOfAuthors", BookController.getListOfAuthors)
 
